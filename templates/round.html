@@ -12,12 +12,12 @@
       <a class="round_number" href="{% url 'round_view' 6 %}">6</a> |
       <a class="round_number" href="{% url 'round_view' 7 %}">7</a> | </h4><br>
     <br>
-    <h3 class="text-center">Live Draft</h3>
+    <h3 class="text-center">Round {{ object.id }}</h3>
   </div>
   {% autoescape off %}
     <table class="table table-striped">
       <tr>
-        {{ draftee }}
+        {{ player }}
       </tr>
     </table>
   {% endautoescape %}

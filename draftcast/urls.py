@@ -16,9 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from app.views import IndexView
+from app.views import IndexView, RoundView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', IndexView.as_view(), name="index_view"),
+    url(r'^round/(?P<pk>\d+)/$', RoundView.as_view(), name='round_view')
 ]
