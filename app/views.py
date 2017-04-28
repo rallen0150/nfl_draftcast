@@ -13,12 +13,4 @@ class IndexView(TemplateView):
         x = requests.get(url)
         soup = BeautifulSoup(x.text, "html.parser")
         context['draftee'] = soup.find_all(class_="draftTable__headline")
-        # player = soup.find_all(class_="draftTable__headline")
-        # b = []
-        # for a in player:
-        #     a.text.replace("\n", " ").split()
-        #     b.append(a)
-        # for i in b:
-        #     i.split(',')
-        #     context['draftee'] = i
         return context
