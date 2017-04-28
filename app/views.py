@@ -12,5 +12,5 @@ class IndexView(TemplateView):
         url = "http://www.espn.com/nfl/draft/rounds"
         x = requests.get(url)
         soup = BeautifulSoup(x.text, "html.parser")
-        context['draftee'] = soup.findAll('ul', {'class': 'draftTable__row'})
+        context['draftee'] = soup.findAll('ul', {'class': 'draftTable__row'})[0].contents
         return context
