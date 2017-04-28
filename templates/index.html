@@ -4,6 +4,11 @@
   <h1>Welcome to the 2017 NFL DraftCast</h1>
 
   {% autoescape off %}
-    {{ draftee}}
+    <table class="table table-bordered">
+      <tr>
+        <td>{{ draftee }}</td>
+      </tr>
+    </table>
+
   {% endautoescape %}
 {% endblock %}
