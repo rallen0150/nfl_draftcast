@@ -20,6 +20,7 @@ class RoundView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['round'] = self.kwargs['pk']
         url = "http://www.espn.com/nfl/draft/rounds/_/round/{}".format(self.kwargs['pk'])
         x = requests.get(url)
         soup = BeautifulSoup(x.text, "html.parser")

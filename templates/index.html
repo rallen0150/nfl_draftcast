@@ -22,3 +22,12 @@
     </table>
   {% endautoescape %}
 {% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  // Refreshes every 5 minutes
+  setTimeout(function(){
+    window.location.reload(1);
+  }, 300000);
+</script>
+{% endblock %}
