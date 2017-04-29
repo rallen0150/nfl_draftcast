@@ -25,7 +25,7 @@ SECRET_KEY = 'xkaaf7fhx_nv$1(!enr!opy*x47n85mi^3!hapv_#dapytq$ls'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quiet-garden-99226.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -80,6 +80,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+database_config = dj_database_url.config()
+if database_config:
+    DATABASES['default'] = database_config
 
 
 # Password validation

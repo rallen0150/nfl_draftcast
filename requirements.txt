@@ -1,0 +1,8 @@
+psycopg2
+django
+djangorestframework
+requests
+gunicorn
+dj-database-url
+whitenoise
+beautifulsoup4
